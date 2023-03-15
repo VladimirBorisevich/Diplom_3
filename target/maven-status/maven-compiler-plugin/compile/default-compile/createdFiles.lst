@@ -1,0 +1,10 @@
+ru/yandex/burger/util/Wait.class
+ru/yandex/burger/page/MainPage.class
+ru/yandex/burger/page/RegisterPage.class
+ru/yandex/burger/client/BaseApi.class
+ru/yandex/burger/page/AccountPage.class
+ru/yandex/burger/page/ResetPasswordPage.class
+ru/yandex/burger/page/LoginPage.class
+ru/yandex/burger/page/HeaderPage.class
+ru/yandex/burger/model/User.class
+ru/yandex/burger/client/UserApi.class
