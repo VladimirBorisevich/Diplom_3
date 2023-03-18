@@ -16,8 +16,7 @@ import ru.yandex.burger.page.MainPage;
 import ru.yandex.burger.page.RegisterPage;
 import ru.yandex.burger.util.Wait;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class RegistrationTest {
     WebDriver driver;
@@ -50,6 +49,10 @@ public class RegistrationTest {
         wait.waitVisibilityOfRegisterButton(driver, 1);
 
         assertEquals(driver.getCurrentUrl(), "https://stellarburgers.nomoreparties.site/login");
+        loginPage.makeSignIn(driver, user.getEmail(), user.getPassword());
+        wait.waitVisibilityOfMakeOrderButton(driver, 1);
+
+        assertTrue(mainPage.isMakeOrderButtonVisible(driver));
     }
 
     @Test

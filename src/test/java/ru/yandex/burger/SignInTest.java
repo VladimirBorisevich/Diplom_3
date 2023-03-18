@@ -90,8 +90,10 @@ public class SignInTest {
         wait.waitVisibilityOfEmailField(driver, 1);
         loginPage.clickResetPasswordButton(driver);
         wait.waitVisibilityOfEmailField(driver, 1);
+        assertEquals(driver.getCurrentUrl(), "https://stellarburgers.nomoreparties.site/forgot-password");
         resetPasswordPage.clickSignInButton(driver);
         wait.waitVisibilityOfEmailField(driver, 1);
+        assertEquals(driver.getCurrentUrl(), "https://stellarburgers.nomoreparties.site/login");
 
         loginPage.makeSignIn(driver, user.getEmail(), user.getPassword());
         wait.waitVisibilityOfMakeOrderButton(driver, 1);

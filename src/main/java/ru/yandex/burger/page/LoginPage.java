@@ -2,7 +2,9 @@ package ru.yandex.burger.page;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class LoginPage {
     private By emailField = By.xpath(".//label[text()='Email']/../input");
@@ -37,7 +39,9 @@ public class LoginPage {
 
     @Step("Нажатие кнопки Восстановить пароль")
     public void clickResetPasswordButton(WebDriver driver) {
-        driver.findElement(resetPassword).click();
+        WebElement element = driver.findElement(resetPassword);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+        element.click();
     }
 
     @Step("Заполнение полей логина")

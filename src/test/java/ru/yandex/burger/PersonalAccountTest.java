@@ -83,7 +83,7 @@ public class PersonalAccountTest {
         headerPage.clickPersonalAccount(driver);
         loginPage.makeSignIn(driver, user.getEmail(), user.getPassword());
         headerPage.clickPersonalAccount(driver);
-        wait.waitVisibilityOfExitButton(driver, 1);
+        wait.waitVisibilityOfExitButton(driver, 2);
         accountPage.clickExitButton(driver);
         wait.waitVisibilityOfEmailField(driver, 1);
 
